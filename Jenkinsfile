@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Deploy application') {
       steps {
-        sh 'ls'
+        sh 'pwd'
       }
     }
 
