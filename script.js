@@ -61,6 +61,10 @@ var config = {
 				scaleLabel: {
 					display: true,
 					labelString: 'value'
+				},
+				ticks: {
+					max: 100,
+				 	min: -100
 				}
 			}]
 		},
