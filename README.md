@@ -14,7 +14,7 @@ server {
   listen [::]:80 default_server;
   root /home/ubuntu/chartjs-real-time-example;
   index index.html;
-  server_name ulmo.mindyourdata.org www.ulmo.mindyourdata.org;
+  server_name chartjs.example.com www.chartjs.example.com;
   location / {
     try_files $uri $uri/ =404;
   }
