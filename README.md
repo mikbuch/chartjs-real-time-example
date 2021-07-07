@@ -20,7 +20,7 @@ In this example HTML and JavaScript are used to create [a static web page](https
 It means that you need no backend server in order to run it. In order to access this site on a server all you have to do
 is to put files from this repository to your serve (e.g., by cloning this repository), and configure a HTTP(S) service, such as `nginx` or `apache` (see below).
 
-## Nginx confituration
+## Nginx configuration
 
 Create a file:
 ```
