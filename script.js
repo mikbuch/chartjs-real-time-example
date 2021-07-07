@@ -45,7 +45,7 @@ var config = {
 	options: {
 		title: {
 			display: true,
-			text: 'Line chart (hotizontal scroll) sample'
+			text: 'Line chart (horizontal scroll) sample'
 		},
 		scales: {
 			xAxes: [{
@@ -83,39 +83,3 @@ window.onload = function() {
 	var ctx = document.getElementById('myChart').getContext('2d');
 	window.myChart = new Chart(ctx, config);
 };
-
-document.getElementById('randomizeData').addEventListener('click', function() {
-	config.data.datasets.forEach(function(dataset) {
-		dataset.data.forEach(function(dataObj) {
-			dataObj.y = randomScalingFactor();
-		});
-	});
-	window.myChart.update();
-});
-
-var colorNames = Object.keys(chartColors);
-document.getElementById('addDataset').addEventListener('click', function() {
-	var colorName = colorNames[config.data.datasets.length % colorNames.length];
-	var newColor = chartColors[colorName];
-	var newDataset = {
-		label: 'Dataset ' + (config.data.datasets.length + 1),
-		backgroundColor: color(newColor).alpha(0.5).rgbString(),
-		borderColor: newColor,
-		fill: false,
-		lineTension: 0,
-		data: []
-	};
-
-	config.data.datasets.push(newDataset);
-	window.myChart.update();
-});
-
-document.getElementById('removeDataset').addEventListener('click', function() {
-	config.data.datasets.pop();
-	window.myChart.update();
-});
-
-document.getElementById('addData').addEventListener('click', function() {
-	onRefresh(window.myChart);
-	window.myChart.update();
-});
