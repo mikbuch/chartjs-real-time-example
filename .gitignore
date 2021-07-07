@@ -1,0 +1,4 @@
+# Ignore JetBrains configuration files
+# Although I sometimes open even static pages with JetBrains, e.g., PyCharm, the .idea settings
+# are unnecessary in this case.
+.idea
